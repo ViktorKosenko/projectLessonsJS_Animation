@@ -18,12 +18,13 @@ let pos = 0;
 // }
 
 function myAnimation() {
-    pos++;
-    elem.style.top = pos + "px";
-    elem.style.left = pos + 'px';
-
     if (pos < 300) {
+        pos++;
+        elem.style.top = pos + "px";
+        elem.style.left = pos + 'px';
         requestAnimationFrame(myAnimation);
+    } else {
+        pos = 0;
     }
 }
 
